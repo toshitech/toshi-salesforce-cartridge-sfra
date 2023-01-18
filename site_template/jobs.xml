@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+    <job job-id="toshiSendOrders" priority="0">
+        <description/>
+        <parameters/>
+        <split sequential="false">
+            <contexts template-ref="template_24">
+                <context site-id="RefArch"/>
+                <context site-id="SiteGenesis"/>
+            </contexts>
+            <flow-template template-id="template_24">
+                <step step-id="toshiSendOrders" type="ExecuteScriptModule" enforce-restart="false">
+                    <description/>
+                    <parameters>
+                        <parameter name="ExecuteScriptModule.Module">int_toshi/cartridge/scripts/toshi/jobs/exportOrders.js</parameter>
+                        <parameter name="ExecuteScriptModule.FunctionName">execute</parameter>
+                        <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                    </parameters>
+                </step>
+            </flow-template>
+        </split>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2021-03-15Z</date>
+                <time>10:29:43.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+</jobs>

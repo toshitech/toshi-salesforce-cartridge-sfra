@@ -1,0 +1,4 @@
+<isinclude template="util/modules" />
+<isset name="assetID" value="${'toshi-cart-'+pdict.country}" scope="page" />
+
+<iscontentasset aid="${assetID}" />

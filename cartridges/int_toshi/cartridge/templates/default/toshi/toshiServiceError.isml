@@ -1,0 +1,7 @@
+<!--- TEMPLATENAME: customerServiceError.isml --->
+
+
+Error occured calling the toshi service - ${pdict.error}.
+<isif condition="${!empty(pdict.msg)}">
+       Aditional message: ${pdict.msg}
+</isif>

@@ -1,0 +1,6 @@
+<!--- TEMPLATENAME: scripts.isml --->
+<script src="https://integration-sandbox-cdn.toshi.co/3.0/main.js" />
+<script>
+    window.Resources = window.Resources || {};
+    window.Resources.toshiError = Resource.msg('toshi.selectdetails', 'toshi', null);
+</script>

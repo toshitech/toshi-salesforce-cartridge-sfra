@@ -1,0 +1,15 @@
+<div class="payment-details">
+    <isloop items="${pdict.order.billing.payment.selectedPaymentInstruments}" var="payment">
+        <isif condition="${payment.paymentMethod === 'CREDIT_CARD'}">
+            <isinclude template="checkout/billing/paymentOptions/creditCardSummary" />
+        </isif>
+        <isif condition="${payment.paymentMethod === 'Toshi'}">
+            <div class="paymentMethodToshi">
+                ${payment.paymentMethod}
+            </div>
+            <div class="paymentAmountToshi">
+                ${Resource.msgf('toshi.payment.amount', 'toshi', null, payment.amount)}
+            </div>
+        </isif>
+    </isloop>
+</div>

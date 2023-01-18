@@ -1,0 +1,4 @@
+<isinclude template="components/modules" />
+<isset name="assetID" value="${'toshi-pdp-'.concat(pdict.country)}" scope="page" />
+
+<iscontentasset aid="${assetID}" />
