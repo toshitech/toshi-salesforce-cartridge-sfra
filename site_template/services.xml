@@ -6,7 +6,7 @@
         <password/>
     </service-credential>
 	<service-credential service-credential-id="Toshi.orderURL">
-        <url>https://3staging.toshi.co/api/v2/order/confirm_store_order</url>
+        <url>https://staging.toshi.co/api/v2/order/confirm_store_order</url>
         <user-id/>
         <password/>
     </service-credential>
